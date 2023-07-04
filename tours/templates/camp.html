@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for camp in object_list %}
+            <div class="box">             
+                <img src="{{camp.cover.url}}" alt="{{camp.title}}">
+                <div class="content">
+                    <h3>{{camp.title}}</h3>
+                    <p>{{camp.desc}}</p>           
+                    <a href="/{{camp.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="camp" class="portfolio-area">
+                <div class="text-content">
+                    <h3>Kenya Camping Safaris, Kenya Budget Joining Camping Safari</h3>
+                    <br>
+                    <p>Welcome to Kenya, the land of Discovery. Of all the countries of Africa, none can match the sheer range of scenery and landscapes found in Kenya, coupled with a 
+                        great variety and concentration of wild animals and birds.</p>
+                    <p>This is a land where the world's remaining populations of big cats, big mammals and plains game still roam free in their natural habitats.</p>
+                       <br>
+                    <p>Following is our range of sample Camping safaris in Kenya. Other than the sampled tours, we also create tailor-made itineraries to suit individual
+                         and /or group interests. If therefore you do not find one that meets your requirement, please send us an e-mail telling us your ideas and we will work together to design your dream safari.</p>    
+                         <p>While doing this we advise to give attention to preferred mode of transportation, levels of accommodation, parks of interest, safari duration, group size, budget and activities of interest. All our Road Safaris daily.</p>
+                        <p>
+                            Also some of this itineraries can be taken as Joining safaris whereby you share the vehicle with other guests with similar itinerary.
+                        </p>
+
+                        <br>
+
+                        <table style="width:100%">
+                            <tr>
+                              <th>Serial No</th>
+                              <th>Camping Safari Packages</th>
+                              
+                            </tr>
+                            <tr>
+                              <td>KDHC001</td>
+                              <td><a href="/services/camp/KDHC001"> 3 Days Masai Mara Camping Safari</a></td>
+                              
+                            </tr>
+                            <tr>
+                              <td>KDHC002</td>
+                              <td><a href="/services/camp/KDHC002">3 Days Amboseli Camping Safari</a></td>
+                            </tr>
+                            <tr>
+                                <td>KDHC003</td>
+                                <td><a href="/services/camp/KDHC003">3 Days Samburu Camping Safari</a></td>
+                            </tr>
+                            <tr>
+                                <td>KDHC004</td>
+                                <td><a href="/services/camp/KDHC004">4 Days Masai Mara and Lake Nakuru Camping Safari</a></td>
+                              </tr>
+                              <tr>
+                                <td>KDHC005</td>
+                                <td><a href="/services/camp/KDHC005">5 Days Masai Mara, lake Nakuru and Lake Naivasha Camping Safari</a></td>
+                              </tr>
+                              <tr>
+                                <td>KDHC006</td>
+                                <td><a href="/services/camp/KDHC006">6 Days Amboseli, Masai Mara and Lake Nakuru Camping Safari</a></td>
+                              </tr>
+                              <tr>
+                                <td>KDHC007</td>
+                                <td><a href="/services/camp/KDHC007">6 Days Samburu, lake Nakuru and Masai Mara Camping Safari</a></td>
+                              </tr>
+                              <tr>
+                                <td>KDHC008</td>
+                                <td><a href="/services/camp/KDHC008">7 Days Masai Mara, Lake Nakuru, Lake Naivasha and Amboseli Camping Safari</a></td>
+                              </tr>
+                              <tr>
+                                <td>KDHC009</td>
+                                <td><a href="/services/camp/KDHC009">7 Days 6 Nights Tsavo East/Tsavo West/Amboseli/Lake Nakuru/Masai Mara</a></td>
+                              </tr>
+                                  
+                          </table>
+
+
+                          <br>
+                          <a href="reservation.html" class="btn">Make A Reservation</a>
+                          <br>
+                        </div>
+            </div>
+            <br>      
+        </div>
+    </div>
+
+
+    {% include 'footer.html' %}
+ <!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>
+    

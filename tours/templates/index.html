@@ -1,0 +1,178 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+
+    {% include 'nav.html' %}
+    
+     <!----home section starts-->
+     <section class="home" id="home">
+        <div class="content">
+         <h3>KENYA DREAM HOLIDAYS</h3>
+         <a href="/services" class="btn">discover more</a>
+        </div>
+     
+        
+        <div class="controls">
+         <span autoplay muted  preload="preload"   data-src="/media/videos/vid1.mp4" type="video/mp4"></span>
+         
+         <span autoplay muted  preload="preload" data-src="/media/videos/vid1.mp4" type="video/mp4"></span>
+        </div>
+        <div class="video-container">
+         <video autoplay muted   preload="preload" src="/media/videos/vid1.mp4" id="video-slider" type="video/mp4"></video>
+         
+        </div>
+       
+     </section>
+    
+     <!--home section ends-->
+    
+    
+    
+    <section class="packages" id="packages">
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+            
+        </h1>
+
+        <div class="box-container">
+            {% for tour in object_list %}
+            <div class="box">
+
+                
+                <img src="{{ tour.cover.url}}" alt="{{tour.title}}">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>{{ tour.title }}</h3>
+                    <p>{{tour.desc}}</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                   
+                    <a href="{{tour.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+
+            
+        </div>
+    </section>
+     
+    
+    
+
+
+
+    <section class="services" id="services">
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>hotels bookings</h3>
+                <p>Affiliated with major hotel chains in Kenya as well as budget hotels and Guest Houses, Kenya Dream Holidays will get you the best hotel deals
+                     whether travelling alone, a couple, family or as a group. </p>
+                     <a href="/services/hotel" id="#hotel" class="btn">Learn More</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Kenya Road Safaris</h3>
+                <p>A a truly unforgettable Safari experience where we offer you the thrill, 
+                    excitement and anticipation of searching, 
+                    seeing animals & bird life in their natural habitat roaming ..</p>
+                    <a href="/services/lodge" id="#lodge" class="btn">Learn More</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Camp Safaris</h3>
+                <p>The safari options below you have a choice to stay in a luxury tented 
+                    camps / lodges or do the basic camping where you pitch the tents.</p>
+                    <a href="/services/camp" id="#camp" class="btn">Learn More</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>Mombasa Short Safaris</h3>
+                <p>Take a break from the Kenyan Beach to experience the wild part of Kenya by taking a 1 Day,
+                     2 days or 3 Days Safari packages from Mombasa by air or by road.</p>
+                     <a href="/services/short" id="#short" class="btn">Learn More</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>Masai Mara Balloon Safaris</h3>
+                <p>Your adventure begins just before dawn. Optimum atmospheric conditions for Hot 
+                    Air Balloon flights here in Kenya are very early in the morning.</p>
+                    <a href="/services/fly" id="#mara" class="btn">Learn More</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>Mountain Climbing</h3>
+                <p>Have you been looking for a unique and really memorable adventure? If yes, you have come to the right site. Here, there are 
+                    a number of exciting holidays on the mountain being offered for you and your friends. </p>
+                    <a href="/services/mountain" id="#mountain" class="btn">Learn More</a>
+            </div>
+            
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Honeymoon & conferences</h3>
+                <p> Kenya has the wonderfully exotic romantic locations for the best honeymoon possible. You will be amazed by the vast areas of jungle, countless streams and rivers,
+                     incredible diversity of wildlife and flora, amazing volcanoes and pristine beaches.  </p>
+                     <a href="/services/moon" id="#moon" class="btn">Learn More</a>
+            </div>
+
+
+            <div class="box">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Shopping in Nairobi</h3>
+                <p>For a wonderful selection of arts and crafts, wooden carvings and beadwork, you can't go wrong at the Nairobi Masai Markets. 
+                    These are held on Fridays on the upper car park and they have around 300 vendors who participate </p>
+                     <a href="/services/shopping" id="#shopping" class="btn">Learn More</a>
+            </div>
+
+
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+     <!----custom  js file link-->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+    </body>

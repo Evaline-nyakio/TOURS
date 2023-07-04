@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for moon in object_list %}
+            <div class="box">             
+                <img src="{{moon.cover.url}}" alt="{{moon.title}}">
+                <div class="content">
+                    <h3>{{moon.title}}</h3>
+                    <p>{{moon.desc}}</p>           
+                    <a href="/{{moon.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+  
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <div id="moon" class="contact-area">
+                <div class="text-content">
+                    <h3>KENYA HONEYMOON PACKAGES</h3>
+                    <br>
+                    <p>Kenya has the wonderfully exotic romantic locations for the best honeymoon possible. 
+                        You will be amazed by the vast areas of jungle, countless streams and rivers, incredible 
+                        diversity of wildlife and flora, amazing volcanoes and pristine beaches.
+                         The honeymoon place of your dreams can be a reality in any of these locations. 
+                         <br>
+                         You can share a romantic honeymoon in a variety of different perfect places 
+                         with your new wife or husband. Because of its size, getaways to the best 
+                         honeymoon destination in different areas of the country are easy.
+                          One day you can stay in a mountain hotel and the next take in the
+                           sun on the soothing sand of a breath taking beach. </p>
+                         <p>
+                            The range of options are countless; just decide which places you would like to visit, 
+                            what you'd like to do and arrange the honeymoon travel deal to suit your tastes.
+                             We are committed to helping you find an exclusive top honeymoon destination. 
+                             <br>
+                             Enjoying your new beginning together is something you'll want to make sure of.
+                              Our staff will help you include all the extra special touches that will make your 
+                              honeymoon trip a unique and unforgettable experience you will both remember for years to come.
+                         </p>
+                         
+                         <br>
+
+                         <a href="reserve/" class="btn">Make A Reservation</a>
+                        <br>
+                        </div>
+            </div>
+
+            <br>     
+        </div>
+    </div>
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>

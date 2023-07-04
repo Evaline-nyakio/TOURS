@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for excursion in object_list %}
+            <div class="box">             
+                <img src="{{excursion.cover.url}}" alt="{{excursion.title}}">
+                <div class="content">
+                    <h3>{{excursion.title}}</h3>
+                    <p>{{excursion.desc}}</p>           
+                    <a href="/{{excursion.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+
+            <div id="excursion" class="contact-area">
+                <div class="text-content">
+                    <h3>Nairobi excursions, Nairobi city tours, Things to do in Nairobi</h3>
+                    <br>
+                    <p>What once was a remote railway outpost has become the largest city between Johannesburg
+                         and Cairo and is Kenya's capital city and the world's safari capital. 
+                         It has long been the commercial centre of Eastern Africa and one of 
+                         the world's cross-roads with its international airport servicing most
+                          of the world's airlines.</p>
+                    
+                          <p>Kenya's capital city has risen in a single century from a brackish
+                             uninhabited swampland to a thriving modern capital. Nairobi is a 
+                             city that never seems to sleep. The entire town has a boundless energy, 
+                             and is a thriving place where all of human life can be found. 
+                             This is a place of great contrasts where race, tribe and origin all become 
+                             facets of a unique Nairobi character.</p>
+
+                             <p>Some of the places to visit whilst in Nairobi include; the National National Museum, Railways Museum, KICC, Sheldrick Elephant Orphanage, Giraffe Centre, Karen Blixen Museum.</p>
+                            
+                             <br>
+                             <h3>places to see in Nairobi City</h3>
+                             <br>
+                             <a href="/services/excursion/Day021">Nairobi City Tour</a>
+                             <br>
+                             <a href="/services/excursion/Day022">Nairobi National park Tour</a>
+                             <br>
+                             <a href="/services/excursion/Day019">Half Day Nairobi Excursion to Sheldrick Elephant Orphanage, Giraffe Centre and Karen Blixen Museum tour</a>
+                             <br>
+                             <a href="/services/excursion/Day017">Full Day Nairobi Excursion to Nairobi National Park,Sheldrick Elephant Orphanage, Giraffe Centre and Karen Blixen</a>
+                             <br>
+                             <a href="/services/excursion/Day016">Blixen Museum</a>
+                             <br>
+                             <a href="/services/excursion/Day018">Half Day Kiambu thu Tea Farm Tour</a>
+                             <br>
+                             <a href="/services/excursion/Day003">1 Day Lake Nakuru Excursion</a>
+                             <br>
+                             <a href="/services/excursion/Day020">Hells Gate, Lake Naivasha and cresent Island  Day Trip</a>
+                            
+                            <br>
+                            <a href="reserve/" class="btn">Make A Reservation</a>
+                            <br>    
+                        </div>
+            </div>
+            <br>       
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>
+

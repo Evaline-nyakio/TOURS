@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for capetown in object_list %}
+            <div class="box">             
+                <img src="{{capetown.cover.url}}" alt="{{capetown.title}}">
+                <div class="content">
+                    <h3>{{capetown.title}}</h3>
+                    <p>{{capetown.desc}}</p>           
+                    <a href="/{{capetown.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+<div class="content-area">
+    <div class="wrapper">
+        
+        <br>
+        <div id="dubai" class="contact-area">
+            <div class="text-content">
+                <h3>Cape Town Excursions</h3>
+                <br>
+               
+                  <br>
+                    <p> Sea Point tour</p>
+                    <br>
+                    <p> De Waterkant tour</p>
+                    <br>
+                    <p> Woodstock</p>
+                    <br>
+                    <p> City Bowl tour</p>
+                    <br>
+                    <p> Green Point</p>
+                    <br>
+                    <p> Bo-Kaap</p>
+                    <br>
+                    <p> Clifton and Camps Bay</p>
+                    <br>
+                    <p> Hout Bay</p>
+                    <br>
+                    <p> Gugulethu tour</p>
+                    
+               
+               
+                </div>
+                <a href="reservation.html" class="btn">Make Reservation</a>
+        </div>  
+         <img src="/media/images/dest23.jpeg" alt="maldives" margin="10px" width="500" height="500">   
+    </div>
+</div>
+
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>
+

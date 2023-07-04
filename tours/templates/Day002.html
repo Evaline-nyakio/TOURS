@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3> 1 Day Tsavo East Safari</h3>
+                    <br>
+                    <p>Depart from Mombasa by sunrise, A drive of about 115 Kms in the direction of Nairobi, taking you into 'Bachuma gate' where you enter the East section of the Tsavo National Park- Kenya's Largest game sanctuary, famed for it's huge herds of Elephants. </p>
+                        
+                         <br>
+                         <p>It is also the home of Lions, Rhinos, Giraffe, Zebra and as well as a variety of other game. You will see water birds at the Aruba Dam on the way to Voi Safari Lodge where lunch will be served. Opportunity for good photographs on animals, birds that come to the water hole in front of the Lodge. After Lunch, a game drive through the park returning to Mombasa in the evening.</p>
+                            
+                            
+                
+
+                                <br>
+                                <a href="reservation.html" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+    
+
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

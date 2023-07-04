@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for shopping in object_list %}
+            <div class="box">             
+                <img src="{{shopping.cover.url}}" alt="{{shopping.title}}">
+                <div class="content">
+                    <h3>{{shopping.title}}</h3>
+                    <p>{{shopping.desc}}</p>           
+                    <a href="/{{shopping.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+
+  <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="shopping" class="contact-area">
+                <div class="text-content">
+                    <h3> SHOPPING IN NAIROBI</h3>
+                    <br>
+                    <h4>MASAI MARKET, NAIROBI.</h4>
+                    <br>
+                    <p>For a wonderful selection of arts and crafts, wooden carvings and beadwork, you can't go wrong at the Nairobi Masai Markets.
+                         These are held on Fridays on the upper car park and they have around 300 vendors who participate Not exclusively 
+                         sold by the "Maasai" these vibrant, colourful markets sell mainly fare ranging from wooden sculptures,
+                          beaded necklaces, batik wall hangings, shoes, soap stone carvings, sisal bags, kikois, textiles and a 
+                          whole host of other exciting goods. All items are Kenyan and the range of goods on offer is impressive.</p>
+                          <br>
+                         <h3>When and Where</h3> 
+                         <br>
+                            <p>*Sunday - Car park outside the Yaya Shopping Centre</p>
+                            <p>*Tuesday Maasai Market is located on the upper floor car park at the Westgate Shopping Centre in Westlands, Nairobi.</p>                        
+                            <p>*Fridays on the upper car park at the Village Market.</p>
+                            <p>* Saturdays city centre at the High Court Car Park</p>                            
+                           <p> Masai Market vendors at the High Court Parking.</p>
+                         
+                           <br>
+                           <h3>CITY MARKET</h3>
+                           <br>
+                           <p>The covered City Market is situated on Muindi Mbingu Street, right in the centre of the town. It offers cheap and fresh
+                             fruits and vegetables on a daily basis. On the rear side of it there is small corridor where one can buy attractive handicraft made souvenirs.</p>
+                             
+                             <br>
+                             <h3>SUPERMARKET  and SHOPPING MALLS</h3>
+                              <br>
+                             <p>They are many located in the city centre and in the outskirts where you can buy almost everything under one roof.
+                                EXAMPLES. </p>
+                                <p>*Nakumart Supermarkets - the largest departmental store chain in Kenya with branches in the city centre and in the outskirts.</p>
+                                
+                                <p> *Sarit Centre, *Yaya Centre,*Village Market,*Galleria Shopping Mall,*And many others</p>
+                                                 
+                                <a href="reserve/" class="btn">Make A Reservation</a>
+                        <br>
+                        </div>
+            </div>
+            <br>        
+        </div>
+    </div>
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>

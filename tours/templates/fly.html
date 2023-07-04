@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for fly in object_list %}
+            <div class="box">             
+                <img src="{{fly.cover.url}}" alt="{{fly.title}}">
+                <div class="content">
+                    <h3>{{fly.title}}</h3>
+                    <p>{{fly.desc}}</p>           
+                    <a href="/{{fly.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="fly" class="about-area">
+                <div class="text-content">
+                    <h3>Kenya Flying Safari Packages, Kenya Air Safaris</h3>
+                    
+                    <br>
+                    <p>These are tailor made Air packages whereby your principal mode of transport shall be by light aircraft. The benefit being quick and comfortable transport allowing you to enjoy the safari for a longer period.</p>   
+                
+                    <br>
+                     <h3>Masai Mara Flying safari Packages</h3>
+                      <br>
+                     <table>
+                        <tr>
+                           <th>no</th>
+                            <th>Masai Mara Package</th>
+                          </tr>
+                        <tr>
+                            <td>001</td>
+                            <td><a href="/services/short/Day010"> 3 Days Mara Sarova Camp flying package</a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td><a href="/services/short/Day011">3 Days Mpata Safari Club flying package</a></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td><a href="/services/short/Day013">3 Days Mara Serena Safari Lodge</a></td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td><a href="/services/short/Day008">3 Days Governors Camp flying package</a></td>
+                        </tr>
+                        
+                         
+                     </table>
+
+                     <br>
+                     <h3>AMBOSELI AND TSAVO KENYA FLYING SAFARIS</h3>
+                      <br>
+
+                     <table>
+                        <tr>
+                           <th>no</th>
+                            <th> Amboseli Package</th>
+                          </tr>
+                        <tr>
+                            <td>001</td>
+                            <td><a href="/services/short/Day009"> 3 Days Serena Kilaguni lodge flying package </a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td><a href="/services/short/Day005">3 Days Amboseli Serena Lodge flying package</a></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td><a href="/services/short/Day012">3 Days Porini Camp flying package</a></td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td><a href="/services/short/Day014">3 Days Ol Tukai Lodge Amboseli flying Safari</a></td>
+                        </tr>
+                      
+                         
+                     </table>
+
+                     <br>
+                     <h3> SAMBURU FLYING SAFARIS</h3>
+                     <br>
+
+                     <table>
+                        <tr>
+                           <th>no</th>
+                            <th> Samburu Packages</th>
+                          </tr>
+                        <tr>
+                            <td>001</td>
+                            <td><a href="/services/short/Day007">3 Days Elephant bedroom luxury Samburu safari</a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td><a href="/services/short/Day006">3 Days Ashnil Camp Samburu Flying Safari package</a></td>
+                        </tr>
+                       
+                      
+                         
+                     </table>
+                     
+
+                     <br>
+                     
+                    </div>
+            </div>
+            <img src="images/post1.jpeg" alt="fly" width="600" height="600">
+        </div>
+    </div>
+   
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>

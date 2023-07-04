@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3> Nairobi National Park Tour / Nairobi National park Excursion</h3>
+                    <br>
+                    <p>Nairobi National Park is a unique ecosystem by being the only protected area in the world close to a capital city. The park is located only 7 km from Nairobi city centre. The savannah ecosystem comprise of different vegetation types. Open grass plains with scattered acacia bush are predominant. The western side has a highland dry forest and a permanent river with a riverine forest. To the south are the Athi-Kapiti Plains and Kitengela migration corridor which are important wildlife dispersal areas during the rain season. Man-made dams within the park have added a further habitat, favourable to certain species of birds and other aquatic biome.</p>
+                        
+                         <br>
+                         <p>The Park is also an acclaimed Rhino Sanctuary, best known for it’s breeding population of over 50 Black (or Browse) rhino, joined by 11 White (or Grass rhino) translocated from Nakuru National Park.
+                            Some of the Park’s smaller, but just as thrilling, inhabitants include 527 species of birds, (from the heaviest flying bird – the Kori Bustard, to the magnificent forest raptor – the Crowned eagle), innumerable species of amphibians, reptiles, insects and plants, all of which thrive in the grasslands, forests, rocky valleys, dry forests and the numerous seasonal and permanent wetlands that make Nairobi National Park so special.</p>
+                            
+
+                            <br>
+                            <p>There is the option of taking an am or pm game viewing.</p>
+
+                                <br>
+                                <p>
+                                    Afternoon option pick up from 1300hrs to 1400hrs depending with pick up location.
+                                </p>
+
+                                <br>
+                                <a href="reservation.html" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+    
+
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

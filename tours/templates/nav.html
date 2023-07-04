@@ -1,0 +1,72 @@
+{% load static %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kenya Dream Holidays</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <body>
+  
+<!--header section starts-->
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+   
+    <img src="/media/images/logo.png" alt="{{logo.title}}" class="logo">
+    
+    <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/packages">packages</a>
+        <a href="/services">services</a>
+        <a href="/book">book</a>
+        <a href="/gallery">gallery</a>
+        <a href="/terms">Terms</a>
+        <a href="/about">about us</a>
+        <a href="/contect">contact us</a>
+
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i> 
+    </div>
+
+    <form method="GET" action="{% url 'search_packages' %}" class="search-bar-container">
+       {% csrf_token %} 
+      <input type="search" id="search-bar" placeholder="search here...">
+      <!--label for="search-bar" class="fas fa-search" ></label>-->
+      <button class="btn" type="submit">Search</button>
+    </form>
+
+</header>
+ 
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+  <form  action="">
+    <h3>login</h3>
+    <input type="email" class="box" placeholder="enter  your email">
+    <input type="password" class="box" placeholder="enter your password">
+    <input type="submit" value="login now" class="btn">
+    <input type="checkbox" id="remember">
+    <label for="remember">remember me</label>
+    <p>forget password ? <a href="#">click here</a></p>
+    <p>don't have and account ? <a href="#">register now</a></p>
+
+  </form>
+
+</div>
+
+<!--packages section starts-->
+
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

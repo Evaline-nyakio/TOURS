@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if results %}
+    <h2>Search Results</h2>
+    <ul>
+    {% for pack in results %}
+      <li>{{ pack.title }} - {{ pack.desc }} - {{ pack.links }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <h2>No results found</h2>
+  {% endif %}
+{% endblock %}

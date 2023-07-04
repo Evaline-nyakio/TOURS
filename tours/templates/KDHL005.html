@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+     
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <div id="maldives" class="contact-area">
+                <div class="text-content">
+                    <h3>6 Days Amboseli, Lake Nakuru and Masai Mara Lodge Safari</h3>
+                    <br>
+                    
+                      <br>
+                        <h3> Day 1: Nairobi</h3>
+                        <p>: We meet you on arrival at the airport and transfer you to your Nairobi hotel for an overnight stay.Hotel booked on bed and breakfast basis.</p>
+                            <br>
+                           
+                                <br>
+                                <br>
+                                <h3>Day 2: Nairobi to Amboseli national Park</h3>
+                                <p>Drive to Amboseli National Park where Mount Kilimanjaro provides a stupendous backdrop. 
+                                    Arrive in time for lunch, check in and have some rest then go for your afternoon game drive. Overnight at your Lodge in Amboseli.</p>
+
+                                <br>
+                                <h3>Day 3: Amboseli national park</h3>
+                                <p>Today you have the option of a full day of gamedrive or Morning and afternoon Game drives. Overnight at your Lodge in Amboseli</p>
+                                
+                                     <br>
+                                     <h3>Day 4: Amboseli National park - Lake Nakuru National Park</h3>
+                                     <p>We take you on a journey through the great Rift Valley to beautiful Lake Nakuru, before taking an afternoon game drive in the park. Dinner and overnight at your Lodge in Nakuru.</p>
+
+                                        <br>
+                                        <h3>Day 5: Lake Nakuru National park- Masai Mara National Reserve</h3>
+                                        <p>After breakfast depart for Masai Mara, arrive at your luxury tented- camp/Lodge in the Mara where the open rolling grasslands ensure that animals are rarely out of sight. Overnight at your camp/lodge.</p>
+                                            <br>
+
+                                            <h3>Day 6: Masai- Mara National Reserve</h3>
+                                            <p>Here on your game drives you get endless opportunities for close encounters with game. Overnight at your Camp/lodge.</p>
+                     <br>
+                       
+                     <h3>Day 7: Masai Mara -Nairobi:</h3>
+                     <p>Early morning gamedrive back to lodge/camp for breakfast. Drive back to Nairobi arriving late afternoon and be transferred to a hotel or airport.</p>
+                     <br>
+
+                     <a href="reserve/" class="btn">Make A Reservation</a>
+                      <br>
+                    </div>
+            </div>          
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

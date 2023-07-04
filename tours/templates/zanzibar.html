@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for zanzibar in object_list %}
+            <div class="box">             
+                <img src="{{zanzibar.cover.url}}" alt="{{zanzibar.title}}">
+                <div class="content">
+                    <h3>{{zanzibar.title}}</h3>
+                    <p>{{zanzibar.desc}}</p>           
+                    <a href="/{{zanzibar.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+
+<div class="content-area">
+    <div class="wrapper">
+        
+        <br>
+        <div id="zanzibar" class="contact-area">
+            <div class="text-content">
+                <h3>Zanzibar Excursions</h3>
+                <br>
+               
+                  <br>
+                    <p> The Safari Blue Tour</p>
+                    <br>
+                    <p> Nungwi Aquarium</p>
+                    <br>
+                    <p> Stone Town Tour</p>
+                    <br>
+                    <p> Prison Island</p>
+                    <br>
+                    <p> Spice Tour</p>
+                    <br>
+                    <p> Mnemba Island</p>
+                    <br>
+                    <p> Johazi Forest</p>
+                    <br>
+                    <p> Dolphins Tours</p>
+                    <br>
+                    <p> Forodhani food market</p>
+                    <br>
+                    <p> Horse riding in the ocean for 30 minutes</p>
+
+                    
+               
+                 <br>
+                
+                </div>
+                <a href="reserve/" class="btn">Make A Reservation</a>
+        </div>
+        <br>
+        
+        <img src="/media/images/post2.jpeg" alt="{{Poster003.title}}" margin="10px" width="600" height="600">    
+       
+    </div>
+</div>
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>
+

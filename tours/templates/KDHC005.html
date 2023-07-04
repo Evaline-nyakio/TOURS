@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+ 
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3>  5 Days Masai Mara, lake Nakuru and Lake Naivasha Budget Camping Safari
+                    </h3>
+                    <br>
+                    <h3>Day 1: Nairobi-Masai Mara</h3>
+                    <p>Depart for Masai Mara, drive through the lush Kikuyu farm land to the edge of the Great Rift Valley. Descend the escarpment via the Loita Plains to Masai Mara Game Reserve in time for lunch. Evening game viewing, dinner and overnight at a camp.</p>
+                        
+                         <br>
+                         <h3>Day 2: Masai Mara</h3>
+                         <p>Full day spent viewing and exploring this spectacular park renowned for its large numbers of game such as wildebeests, zebras and its majestic predators. Dinner and overnight at the  Camp.</p>
+                            
+                            <br>
+                            <h3>Day3: Masai Mara-Naivasha</h3>
+                            <br>
+                            <p>After breakfast, proceed to Naivasha arriving in time for lunch. Get a chance to see Lake Naivasha, the second biggest fresh water lake in the Rift Valley. Lake Naivasha is an ornithologist’s paradise. Dinner and overnight at the Taphe hotel or similar</p>
+
+                                <br>
+                                <h3>Day 4: Lake Naivasha-Lake Nakuru</h3>
+                                <p>
+                                    After breakfast, go to Hells Gate National park, only park you can do a bicycle or walking tour, here you can also do rock climbing.Check out early afternoon and after lunch separt for Nakuru. On arrival check in your hotel for dinner and over night.
+                                </p>
+                                <br>
+                                <h3>Day 5: Lake Nakuru-Nairobi</h3>
+                                <p>Early breakfast then go to the park for a whole morning and early afternoon gamedrive. After lunch , depart for Nairobi.</p>
+
+                                <br>
+                                <a href="reserve/" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

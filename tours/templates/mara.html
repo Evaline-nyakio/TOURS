@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for mara in object_list %}
+            <div class="box">             
+                <img src="{{mara.cover.url}}" alt="{{mara.title}}">
+                <div class="content">
+                    <h3>{{mara.title}}</h3>
+                    <p>{{mara.desc}}</p>           
+                    <a href="/{{mara.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+  
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3> MASAI MARA BALLOON SAFARI</h3>
+                    <br>
+                    <p>Your adventure begins just before dawn. Optimum atmospheric conditions for Hot Air Balloon flights here in Kenya are very early in the morning. Your anticipation begins
+                         the evening before as you look forward to the thrill of the following morning.</p>
+                        
+                         <br>
+                         <p>Rise early and transfer to your launch site. As the sun’s golden glow tinges the eastern horizon, the crew completes the necessary preparations to ensure a safe and enjoyable flight. Your pilot gives you a last minute briefing on safety procedures 
+                            and the powerful burners are ignited to bring the colourful craft to life.</p>
+                            
+                            <br>
+                            <h3>Balloon over Mara Serena</h3>
+                            <br>
+                            <p>The ground crew helps you aboard after one final check by the pilot, the aerostat is heated up and as you are airborne the stunning panorama unfolds. The Balloon silently soars over the vast Masai Mara eco-system & the snaking Mara River - The wilds of Africa!
+                                Your pilot gently lands on the open plains of the Masai Mara. You return to earth -Celebration! As the crew scurries to set up your buffet breakfast near your landing site champagne corks pop into the air to toast your return.</p>
+
+                                <br>
+                                <p>
+                                    Take this unforgettable balloon safari at Masai Mara for only USD 450 Per Person and if booked together with a safari you get a discount
+                                </p>
+
+                                <br>
+                                <a href="reserve/" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>  
+        </div>
+        
+    </div>
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+mara

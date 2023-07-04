@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+     
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <div id="maldives" class="contact-area">
+                <div class="text-content">
+                    <h3>Maldives Excursions</h3>
+                    <br>
+                    
+                      <br>
+                        <a href="#">Sub marine tour</a>
+                        <br>
+                        <a href="#">Sandbank, snorkeling, dolphin cruise, picnics</a>
+                        <br>
+                        <a href="#">Airport transfers by speeds boats</a>
+                        <br>
+                        <a href="#">Adaaran Experience</a>
+                        <br>
+                        <a href="#">Full day Maldives adventure</a>
+                        <br>
+                        <a href="#">Honeymoon experience</a>
+                   
+                     <br>
+                     <a href="reserve/" class="btn">Make A Reservation</a>
+                      <br>
+                    </div>
+            </div>          
+        </div>
+    </div>
+   
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for short in object_list %}
+            <div class="box">             
+                <img src="{{short.cover.url}}" alt="{{short.title}}">
+                <div class="content">
+                    <h3>{{short.title}}</h3>
+                    <p>{{short.desc}}</p>           
+                    <a href="/{{short.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+    
+    <div class="content-area">
+        <div class="wrapper">
+            
+            
+            <div id="short" class="contact-area">
+                <div class="text-content">
+                    <h3>Short Safaris from Mombasa</h3>
+                    <br>
+                    <p>Take a break from the Kenyan Beach to experience the wild part of Kenya by taking a 1 Day, 2 days or 3 Days Safari packages from Mombasa by air or by road .</p>
+                      <br>
+                      <h3>Some itineraries you can choose from:-</h3>
+                      <br>
+                        <a href="/services/short/Day001">1 DAY MALINDI TOUR</a>
+                        <br>
+                        <a href="/services/short/Day002">1 DAY TSAVO EAST SAFARI</a>
+                        <br>
+                        <a href="/services/short/Day004">1 NIGHT SHIMBA HILLS LODGE SAFARI</a>
+                        <br>
+                        <a href="/services/short/Day015">3 DAYS TSAVO EAST AND SALT LICK SANCTUARY SAFARI</a>
+                        <br>
+                        <a href="/services/fly/">3 DAYS MASAI MARA FLYING PACKAGE EX MOMBASA</a>
+                   
+                    </div>
+            </div>
+            <img src="images/post4.jpeg" alt="short" width="600" height="600">     
+        </div>
+    </div>
+
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+</body>

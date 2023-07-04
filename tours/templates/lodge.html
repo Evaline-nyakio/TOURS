@@ -1,0 +1,124 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for lodge in object_list %}
+            <div class="box">             
+                <img src="{{lodge.cover.url}}" alt="{{lodge.title}}">
+                <div class="content">
+                    <h3>{{lodge.title}}</h3>
+                    <p>{{lodge.desc}}</p>           
+                    <a href="services.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+
+<div class="content-area">
+    <div class="wrapper">
+        <div id="lodge" class="banner">
+           <div class="text-content">
+            <h3>Kenya Lodge Safaris / Kenya Luxury Tented Camping Safaris</h3>
+            <br>
+            <p>A truly unforgettable Safari experience where we offer you the thrill, excitement and anticipation of searching, seeing animals & bird life in their natural habitat roaming freely through some of the world's most spectacular scenery with Nights spent in well selected lodges and Luxury Tented Camps in the parks and reserves.
+                Private safaris and group safaris are available.</p>
+            
+                <br>
+                <table style="width:100%">
+                    <tr>
+                      <th>Serial No</th>
+                      <th>Safari</th>
+                      
+                    </tr>
+                    <br>
+                    <tr>
+                      <td>KDHL001</td>
+                      <td><a href="/services/lodge/KDHL001">3 Days Masai Mara Lodge Safari</a></td>
+                      
+                    </tr>
+                    
+                    <tr>
+                      <td>KDHL002</td>
+                      <td><a href="/services/lodge/KDHL002">3 Days Amboseli Lodge safari</a></td>
+                    </tr>
+                    <tr>
+                        <td>KDHL003</td>
+                        <td><a href="/services/lodge/KDHL003">4 Days Masai Mara and Lake Nakuru Lodge safari</a></td>
+                    </tr>
+                    <tr>
+                        <td>KDHL004</td>
+                        <td><a href="/services/lodge/KDHL004">5 Days Masai Mara, Lake Naivasha and Lake Nakuru Lodge Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL005</td>
+                        <td><a href="/services/lodge/KDHL005">6 Days Amboseli, Lake Nakuru and Masai Mara Lodge Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL006</td>
+                        <td><a href="/services/lodge/KDHL006">7 Days Samburu, Lake Nakuru, Masai Mara and Lake Naivasha Lodge Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL007</td>
+                        <td><a href="/services/lodge/KDHL007">7 Days Aberadares National Park, Sweetwaters, Lake Nakuru and Masai Mara luxury lodge Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL008</td>
+                        <td><a href="/services/lodge/KDHL008">7 Days/ 6 Nights Amboseli/Tsavo and Beach Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL009</td>
+                        <td><a href="/services/lodge/KDHL009">7 Days Western Kenya Trail Blazer Safari</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL0010</td>
+                        <td><a href="/services/lodge/KDHL010">10 Days Kenya Lodge Road Package</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL0011</td>
+                        <td><a href="/services/lodge/KDHL011">15 Days Kenya bush and beach safari, Sweetwaters, Treetops, Lake Nakuru, Lake Naivasha, Masai Mara and Mombasa</a></td>
+                      </tr>
+                      <tr>
+                        <td>KDHL0012</td>
+                        <td><a href="/services/lodge/KDHL012">17 Days Bush and Beach Road Package</a></td>
+                      </tr>
+
+
+
+                  </table>
+
+                  <a href="reserve/" class="btn">Make A Reservation</a>
+        
+            </div>
+        </div>
+    </div>
+</div>
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+    </body>
+  
+  

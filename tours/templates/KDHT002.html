@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3> 5 Day 4 Nights Arusha National Park, Tarangire, Ngorongoro and Serengeti lodge or camping safari</h3>
+                    <br>
+                
+                    <h3>DAY 1: Arusha National Park.</h3>
+                    <br>
+                    <p>You will depart early after breakfast with picnic lunch boxes for the Arusha National Park [37 km] and drive to the rim of Ngurdoto Crater and Momella Lake. You will have a game drive at the park and as an option you can choose to do a 3-4 hour walk in the park before starting the game drive. You will return late in the evening for dinner and overnight at your lodge or campsite.</p>
+                        
+                         <br>
+                         <h3>DAY 2: Arusha - Tarangire National Park.</h3>
+                         <br>
+                         <p>You will depart for Tarangire National Park for a game drive in this very diverse park with picnic lunch boxes, Tarangire is well known for its large herds of Elephant population. You will proceed with the game drive until late afternoon when you will drive to your lodge or campsite for dinner & overnight.</p>
+                            
+                            <br>
+                            <h3>DAY 3: Tarangire - Ngorongoro Crater</h3>
+                            <br>
+                            <p>You will depart for a game drive at the Ngorongoro Crater with picnic lunch boxes until late in the afternoon when you will proceed to your lodge or campsite for dinner & overnight.</p>
+
+                                <br>
+                                <h3>DAY 4: Ngorongoro Crater - Serengeti National Park</h3>
+                                <p>
+                                    Early after breakfast you will drive to Serengeti National Park with picnic lunch boxes. You will have a game drive on route via the Olduvai Gorge until late in the afternoon when you will proceed to your lodge or campsite for dinner & overnight.
+                                </p>
+                                <br>
+                                <h3>DAY 5: Serengeti National Park - Arusha.</h3>
+                                <p>You will have an early in the morning game drive at the Serengeti National Park and after breakfast you will drive back to Arusha with picnic lunch boxes.</p>
+
+
+                                <br>
+                                <a href="reserve/" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+    
+
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

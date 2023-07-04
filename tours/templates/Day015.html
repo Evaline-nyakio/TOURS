@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3> 3 Days Tsavo East and Salt Lick Game Sanctuary Safari </h3>
+                    <br>
+                    <h3>Day 1</h3>
+                    <br>
+                    <p>Pick up from your hotel, drive to Tsavo East National Park. Game drive en route. Arriving in time for lunch at Voi Safari Lodge Afternoon game drive at Tsavo Park. Until sunset .All meals and overnight at Voi Safari Lodge .
+                    </p>
+                        
+                         <br>
+                         <h3>Day 2</h3>
+                         <br>
+                         <p>Early Morning Game Drive. Back to Voi Safari Lodge for Breakfast. After breakfast proceed to Salt Lick
+                            Game Sanctuary arriving in time for lunch. Afternoon game drive at Taita Hills Game Sanctuary. Dinner and overnight at the amazing Saltlick lodge designed for lofty game viewing from its thatched roof rondavels and walkways</p>
+                            
+                            <br>
+                            <h3>Day 3</h3>
+                            <br>
+                            <p>After breakfast, have a leisure time at the viewpoint. After Lunch check out and drive back to Mombasa.</p>
+                
+
+                                <br>
+                                <a href="reservation.html" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+
+ 
+    
+
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

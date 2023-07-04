@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+    
+    <br>
+    <br>
+   
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mara" class="contact-area">
+                <div class="text-content">
+                    <h3>4 Days Masai Mara and Lake Nakuru Camping Safari</h3>
+                    <br>
+                    <p>This safari can be a private safari or a joining budget camping safari where you share the vehicle with other guests and the cost is very reasonable at only USD 500 per person Valid from January to December.</p>
+                        <br>
+                        <h3>DAY 1 Nairobi - Masai Mara</h3>
+                         <br>
+                         <p>After breakfast Pick up from your hotel around 8.00am and depart Nairobi to Maasai
+                            Mara Game Reserve with a stop over at the great rift valley view point. You arrive
+                            masai mara late afternoon and proceed for a game drive  after check in. Dinner and
+                            overnight at camp.<br>
+                            <br>
+                            <h3>DAY 2 Masai mara full day</h3>
+                            <br>
+                            <p>After breakfast Go to the park with  picnic lunch for a full day exploring this unique park
+                                which really forms the northern part of the famous Serengeti National Park. Meals
+                                and overnight at camp.</p>
+
+                                <br>
+                                <h3>DAY 3 Masai mara - Lake Nakuru</h3>
+                                <br>
+                                <p>
+                                    Pre morning game drive and then after breakfast depart for Lake Nakuru with a stop at Narok for lunch.You are going to arrive Nakuru early evening check in at your hotel outside the park for dinner and overnight.
+                                </p>
+                                <br>
+                                <h3>DAY 4 Day Lake Nakuru - Nairobi</h3>
+                                <br>
+                                <p>After breakfast proceed for a game drive to Lake Nakuru which is world renowned for its masses of flamingoes and is often referred to as the "Pink Lake". Beside birds,
+                                    it is possible to see other game like Water Buck, Impala, Rhino,giraffe, lion and Buffalo in the gardens surrounding.
+                                    <br>
+                                    After lunch depart to Nairobi arriving around 4/5pm in the evening.</p>
+
+                                <br>
+                                <a href="reserve/" class="btn">Make A Reservation</a>
+                                <br>
+                        </div>
+            </div>
+             <br>       
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static script.js %}"></script>
+</body>
+</html>

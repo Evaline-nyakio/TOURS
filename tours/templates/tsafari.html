@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for tsafari in object_list %}
+            <div class="box">             
+                <img src="{{tsafari.cover.url}}" alt="{{tsafari.title}}">
+                <div class="content">
+                    <h3>{{tsafari.title}}</h3>
+                    <p>{{tsafari.desc}}</p>           
+                    <a href="/{{tsafari.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+  
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="tsafari" class="contact-area">
+                <div class="text-content">
+                    <h3>Tanzania lodge Safari, Tanzania Budget Camping Safari.</h3>
+                    <br>
+                    <p>The safari options below you have a choice to stay in a luxury tented camps / lodges or do the basic camping where you pitch the tents.</p>
+
+                    <br>
+                    <table style="width:100%">
+                        <tr>
+                          <th>Serial No</th>
+                          <th>Tanzania Budget Camping Safari.</th>
+                          
+                        </tr>
+                        <tr>
+                          <td> KDHT001</td>
+                          <td><a href="/services/tsafari/KDHT001"> 5 Day Tanzania Wildlife Safari - Tarangire, Serengeti, Ngorongoro and Lake Eyasi Lodge or camping safari</a></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>KDHT002</td>
+                          <td><a href="/services/tsafari/KDHT002">5 Day 4 Nights Safari - Arusha National Park, Tarangire, Ngorongoro and Serengeti lodge or camping safari.</a></td>
+                        </tr>
+                        <tr>
+                            <td>KDHT003</td>
+                            <td><a href="services/tsafari/KDHT003">6 Day Tanzania Wildlife Safari - Lake Manyara, Serengeti and Ngorongoro Crater lodgee or camping safari.</a></td>
+                        </tr>
+                        <tr>
+                            <td>KDHC004</td>
+                            <td><a href="services/tsafari/KDHT004">410 Days / 9 Nights – Selous Game Reserve – Rufiji – Ruaha National Park – Mikumi National Park</a></td>
+                          </tr>
+                          
+                              
+                      </table>
+
+                      <br>
+
+                      <a href="reserve/" class="btn">Make A Reservation</a>
+                      <br>
+                    </div>
+            </div>
+            <br>        
+        </div>
+    </div>
+{% include 'footer.html' %}
+<!----custom  js file link-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static script.js %}"></script>
+tsafari

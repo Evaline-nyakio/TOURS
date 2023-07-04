@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Dream Holidays</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+ <br>
+    <section class="gallery" id="gallery">
+     
+        <div class="box-container">
+            {% for mountain in object_list %}
+            <div class="box">             
+                <img src="{{mountain.cover.url}}" alt="{{mountain.title}}">
+                <div class="content">
+                    <h3>{{mountain.title}}</h3>
+                    <p>{{mountain.desc}}</p>           
+                    <a href="/{{mountain.links}}" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            {% endfor %}
+  
+            
+        </div>
+    </section>
+    
+    <div class="content-area">
+        <div class="wrapper">
+            
+            <br>
+            <div id="mountain" class="contact-area">
+                <div class="text-content">
+                    <h3>Mountain Climbing</h3>
+                    <br>
+                    <p>Have you been looking for a unique and really memorable adventure? If yes, 
+                        you have come to the right site. Here, there are a number of exciting 
+                        holidays on the mountain being offered for you and your friends.
+                         We have a wide range of options which all aim to provide you the 
+                         best experiences in Kenya. Browse over the various packages listed
+                          on this site and choose whichever is best and most enjoyable for you. 
+                        Everything that you must know for your holidays is listed here.</p>
+                        <br>
+
+                        <p>Nearly everybody would like to experience the euphoria of climbing Africa's 
+                            highest peak Mt. Kenya and Mt. Kilimanjaro(5895m) one of the chief attraction
+                             of this snow capped spectacular mountains that no previous mountains 
+                             experience is required. you have to be physically fit to make the ascent
+                              of the mountain, which is exhibiting and unforgettable. Below are the 
+                              packages we offer for these activities. please click on anyone of them 
+                              for more details:</p>
+
+
+                              <br>
+                              <a href="reserve/" class="btn">Make A Reservation</a>
+                                <br>
+                            </div>
+            </div>
+            <br>        
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <!----custom  js file link-->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script src="{% static script.js %}"></script>
+   </body>
+       
